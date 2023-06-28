@@ -1,7 +1,15 @@
+import { setIsElementActive } from "../utils/display.js";
 
 const containerRests = document.getElementById('container-restaurants');
 const inputSearch = document.getElementById('input-search');
 const buttonSearch = document.getElementById('button-search');
+const spinnerLoading = document.getElementById('spinner-loading');
+
+export const EventOnSearch = [];
+
+export function clearRestaurants() {
+    containerRests.innerHTML = '';
+}
 
 export function renderRestaurants(items) {
     let html = '';
@@ -9,7 +17,9 @@ export function renderRestaurants(items) {
     containerRests.innerHTML = html;
 }
 
-export const EventOnSearch = [];
+export function setIsSpinnerLoadingActive(isActive) {
+    setIsElementActive(spinnerLoading, isActive);
+}
 
 function getRestaurantHTML(item) {
     return `

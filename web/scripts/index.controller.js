@@ -1,33 +1,35 @@
 
+import { API_ROOT } from './const.js';
 import * as view from './index.view.js';
 
-const apiRoot = `http://localhost:3000/v1`;
+const apiRoot = API_ROOT;
 
-function showAllRestaurants(data) {
+function showRestaurants(data) {
+    view.setIsSpinnerLoadingActive(false);
     view.renderRestaurants(data);
 }
 
-async function loadRestaurants() {
+async function fetchRestaurantsData(api) {
     try {
-        const data = (await axios.get(`${apiRoot}/restaurants`)).data;
-        showAllRestaurants(data);
+        view.clearRestaurants();
+        view.setIsSpinnerLoadingActive(true);
+        const data = (await axios.get(api)).data;
+        showRestaurants(data);
     }
     catch (error) {
         console.log(error);
     }
 }
 
-function registerEventSearchCallback() {
+function setEventSearchCallback() {
     view.EventOnSearch.push(async (keyword) => {
-        try {
-            const data = (await axios.get(`${apiRoot}/restaurants/?keyword=${keyword}`)).data;
-            showAllRestaurants(data);
-        }
-        catch (error) {
-            console.log(error);
-        }
+        fetchRestaurantsData(`${apiRoot}/restaurants/?keyword=${keyword}`);
     });
 }
 
-registerEventSearchCallback();
+function loadRestaurants() {
+    fetchRestaurantsData(`${apiRoot}/restaurants`);
+}
+
+setEventSearchCallback();
 loadRestaurants();

@@ -17,7 +17,7 @@ export class MockDB {
     }
 
     getRestaurantById(id) {
-        return this.results.find((item) => item.id === id) ?? {};
+        return this.results.find((item) => item.id === id) ?? null;
     }
 
     getRestaurantsByName(name) {
