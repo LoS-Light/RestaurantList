@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/show-styles.css">
+</head>
+
+<body>
+    <header>
+        <!-- navigation -->
+        <nav class="navbar navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/6227/restaurant-list-logo.png" width="30" height="30" class="d-inline-block align-top" alt="好。吃">
+                    我的餐廳清單
+                </a>
+            </div>
+        </nav>
+
+        <div class="banner"></div>
+    </header>
+
+    <h1 id="title-restaurant" class="mb-1 restaurant-show-title"></h1>
+    <div id="container-restaurant" class="container">
+        <div class="d-flex justify-content-center m-4">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <script type="module" src="./scripts/show.controller.js"></script>
+</body>
+
+</html>
