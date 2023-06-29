@@ -45,6 +45,10 @@ In your browser, open http://localhost:3000 to see the website.
 
 https://restaurantlist.loslight.com
 
+![image](https://github.com/LoS-Light/RestaurantList/blob/main/screenshots/restaurant-list-01.jpg)
+
+![image](https://github.com/LoS-Light/RestaurantList/blob/main/screenshots/restaurant-list-02.jpg)
+
 ## License
 
 This project is licensed under the MIT License - see the LICENSE.md file for details
