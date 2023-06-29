@@ -45,6 +45,8 @@ In your browser, open http://localhost:3000 to see the website.
 
 https://restaurantlist.loslight.com
 
+## Screenshots
+
 ![image](https://github.com/LoS-Light/RestaurantList/blob/main/screenshots/restaurant-list-01.jpg)
 
 ![image](https://github.com/LoS-Light/RestaurantList/blob/main/screenshots/restaurant-list-02.jpg)
