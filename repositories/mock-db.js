@@ -21,10 +21,12 @@ export class MockDB {
     }
 
     getRestaurantsByName(name) {
+        name = name.toLowerCase().trim();
         return this.results.filter((item) => item.name.toLowerCase().includes(name)) ?? [];
     }
 
     getRestaurantsByCategory(category) {
+        category = category.toLowerCase().trim();
         return this.results.filter((item) => item.category === category) ?? [];
     }
 }
